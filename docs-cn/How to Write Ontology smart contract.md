@@ -1,8 +1,8 @@
 # How to Write Ontology smart contract
 
-ontology 智能合约目前支持C#和Python两种语言编写智能合约
+ontology 智能合约目前支持C#和Python两种语言编写智能合约。[Video](https://v.qq.com/x/page/b07914b7fxc.html)
 
-##Introduce
+## Introduce
 
 一份标准的智能合约主要有三个部分
 
@@ -13,7 +13,7 @@ ontology 智能合约目前支持C#和Python两种语言编写智能合约
 - 合约具体调用函数的实现
 
 
-##1.1 Package import
+## 1.1 Package import
 和其他任何编程语言一样，开发智能合约也需要在头部声明需要引用的package，
 
 常用的package
@@ -35,7 +35,7 @@ from boa.interop.System.Storage import GetContext, Get, Put, Delete
 
 
 
-##1.2 Main function define
+## 1.2 Main function define
 
 ```python
 
@@ -74,7 +74,7 @@ return Invoke(p1, p2, ...pn)
 
 
 
-##1.3 Function Implement
+## 1.3 Function Implement
 
 合约实际执行函数的函数和传统的编程语言一样，主要是合约逻辑处理、数据存储，并将合约执行的结果返回给Main合约即可。
 
