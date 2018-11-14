@@ -1,5 +1,4 @@
-#SmartX Debug Example
-
+# SmartX Debug Example
 
 ![smartx debug](../images/debug.png)
 
