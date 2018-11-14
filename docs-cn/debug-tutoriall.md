@@ -1,9 +1,7 @@
 #SmartX Debug Example
 
 
-![smartx debug](./images/smartx debug.png)
-
-
+![smartx debug](../images/debug.png)
 
 ## Debug 设置
 - **set break point**
