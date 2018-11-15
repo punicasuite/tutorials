@@ -1,1 +1,1 @@
-# smartcontract-tutorials
+# tutorials
