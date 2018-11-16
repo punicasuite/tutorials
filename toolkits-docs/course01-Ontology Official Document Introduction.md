@@ -18,7 +18,7 @@
 - [Overview](https://ontio.github.io/documentation/)
 -  [Smart Contract Documentation](https://ontio.github.io/documentation/Introduction_of_Ontology_Smart_Contract_en.html)
 
-Notes: We support Python and C# language currently and will support Go and Javascript in the future.
+> Notes: We support Python and C# language currently and will support Go and Javascript in the future.
 
 ### 4. Interface 
 - [Interface documentation](https://ontio.github.io/documentation/rpc_api_en.html)
