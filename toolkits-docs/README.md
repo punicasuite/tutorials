@@ -10,7 +10,8 @@ Email: messixaviinsta0303@163.com
 ```
 * Korea Version:
 ```
-Contact: Alice 
+Contact: Alice/김예진
 Wechat: yejin_alice27
-Email: 
+Kakao: https://open.kakao.com/o/s2FmTF4
+Email: alicekim527@gmail.com
 ```
