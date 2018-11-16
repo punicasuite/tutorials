@@ -12,7 +12,7 @@
 2. Source code
 - ```git clone https://github.com/ontio/ontology.git```
 3. Solo chain
-- [Download from release](https://github.com/ontio/ontology/releases)
+- [Download from release](https://github.com/punicasuite/solo-chain)
 
 ### 3. Ontology Smart Contract
 - [Overview](https://ontio.github.io/documentation/)
