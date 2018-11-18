@@ -7,16 +7,16 @@ Cyano Wallet is a wallet application based on the Google and Firefox plug-in Web
 Cyano wallet is contributed by Ontology community. You can see the [source code](https://github.com/OntologyCommunityDevelopers/cyano-wallet) in Github.
 
 Currently supporting:
-• Create wallet using mnemonic phrase
-• Login with mnemonic phrase, private key, or a stored account
-• Ledger /Trezor support
-• View balance and record
-• Send ONG and ONT
-• Withdraw (redeem) ONG
-• Switch between networks (TestNet/MainNet/private) with TLS support
-• ONT ID support
-• Ontology dAPI support
-• NEO and ONT address support for normal and Ledger accounts
+- Create wallet using mnemonic phrase
+- Login with mnemonic phrase, private key, or a stored account
+- ledger /Trezor support
+- View balance and record
+- Send ONG and ONT
+- Withdraw (redeem) ONG
+- Switch between networks (TestNet/MainNet/private) with TLS support
+- ONT ID support
+- Ontology dAPI support
+- NEO and ONT address support for normal and Ledger accounts
 
 ## 2. How to install Cyano wallet
 
