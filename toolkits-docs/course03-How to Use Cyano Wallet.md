@@ -100,3 +100,9 @@ Step 2 - Confirm the transaction and input the password.
 
 ![input pwd](https://upload-images.jianshu.io/upload_images/150344-a57a9f7ef6c14c07.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+```
+Please feel free to give any suggestion
+Contact: Yue Zhao 
+Wechat: 16621171248
+Email: messixaviinsta0303@163.com
+```
