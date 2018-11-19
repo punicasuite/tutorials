@@ -99,7 +99,7 @@ const result = await client.api.message.verifyMessage({ message, signature });
 A full list of methods can be found in the [dAPI Specification document](https://github.com/backslash47/OEPs/blob/oep-dapp-api/OEP-6/OEP-6.mediawiki).
 
 
-### 4. Running the demo project
+## 4. Running the demo project
 
 Clone the [dAPI demo](https://github.com/OntologyCommunityDevelopers/ontology-dapi-demo) which we will use to demonstrate functionality.
 
