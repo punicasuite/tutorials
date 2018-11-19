@@ -13,7 +13,7 @@ Features:
 
 Note: It is necessary to have installed suitable **dAPI provider** . Reference implementation is [How to Use Cyano Wallet](https://github.com/punicasuite/tutorials/blob/master/toolkits-docs/course03-How%20to%20Use%20Cyano%20Wallet.md).
 
-## 2. OEP6 architecture 
+## 2. OEP-6 architecture 
 
 The interaction between dApp and Ontology network can be described with this diagram:
 
@@ -31,7 +31,7 @@ dAPI providers might use dAPI.js as the communication protocol, but they can als
 
 ## 3. How to install and use dAPI
 
-#### 3.1 Setting up the development environment
+### 3.1 Setting up the development environment
 
 Please ensure you have the following installation and configuration in order to setup the development environment.
 
@@ -39,14 +39,14 @@ Please ensure you have the following installation and configuration in order to 
 - [Cyano Wallet](https://chrome.google.com/webstore/detail/ontology-web-wallet/dkdedlpgdmmkkfjabffeganieamfklkm)
 - [Git](https://git-scm.com/)
 
-#### 3.2 dAPI installation
+### 3.2 dAPI installation
 The Ontology dAPI is the core API used to interface with the Ontology blockhain when creating a dApp and the repository can be found [here](https://github.com/ontio/ontology-dapi). First you must install the npm package using: 
 
 ```
 $ npm install ontology-dapi
 ```
 
-#### 3.3 dAPI instantiation
+### 3.3 dAPI instantiation
 
 To use the dAPI in your project, you need to import the library and then register as a client.
 Import and register the dAPI using:
@@ -57,11 +57,11 @@ import { client } from 'ontology-dapi';
 client.registerClient({});
 ```
 
-#### 3.4 Example dAPI methods
+### 3.4 Example dAPI methods
 
 Once imported and registered, use the provided dAPI methods in your dApp (see below).
 
-##### Example blockchain methods
+#### Example blockchain methods
 
 ```
 const network = await client.api.network.getNetwork();
@@ -71,20 +71,20 @@ const transaction = await client.api.network.getTransaction({txHash: '314e24e5bb
 const balance = await client.api.network.getBalance({ address: 'AcyLq3tokVpkMBMLALVMWRdVJ83TTgBUwU' });
 ```
 
-##### Example asset methods
+#### Example asset methods
 
 ```
 const result = await client.api.asset.makeTransfer({ recipient, asset, amount });
 ```
 
-##### Example Smart Contract Methods
+#### Example Smart Contract Methods
 
 ```
 const result = await client.api.smartContract.invoke({contract,method,parameters,gasPrice,gasLimit,requireIdentity});
 const result = await client.api.smartContract.invokeRead({ contract, method, parameters });
 const result = await client.api.smartContract.deploy({code,name,version,author,email,description,needStorage,gasPrice,gasLimit});
 ```
-##### Example Message Methods
+#### Example Message Methods
 
 ```
 const message: string = values.message;
