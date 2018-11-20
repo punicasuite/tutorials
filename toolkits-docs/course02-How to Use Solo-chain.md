@@ -1,6 +1,8 @@
 <h1 align="center">How to Use Solo-chain</h1>
 <p align="center" class="version">Version 0.1</p>
 
+[**Click here to view the course video**](https://drive.google.com/open?id=1ckycnoNC1ipLoVtU4g-fXiqXpMyTj6Vp)
+
 ### 1. Installation
 
 Solo-chain is an Ontology single-node private-net. It generates a block every six seconds.
