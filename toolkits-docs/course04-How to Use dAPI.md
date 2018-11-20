@@ -1,6 +1,8 @@
 <h1 align="center">How to Use dAPI</h1>
 <p align="center" class="version">Version 0.1</p>
 
+[**Click here to view the course video**](https://drive.google.com/open?id=19H6C0_aEjKfJn_WeqsNTZtceWB4O20a2)
+
 ## 1. What is dAPI
 
 DAPI (Decentralized API) is API for dApps on Ontology blockchain. This is an implementation of dAPI from [**OEP-6**](https://github.com/backslash47/OEPs/blob/oep-dapp-api/OEP-6/OEP-6.mediawiki) communication protocol. dApp developers can call the dAPI interface to interact with the Ontology blockchain and Chrome plug-in wallet, supporting query chain information, assets, digital identities, smart contracts, and more.
