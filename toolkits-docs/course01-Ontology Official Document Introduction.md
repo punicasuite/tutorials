@@ -1,6 +1,8 @@
 <h1 align="center">Ontology Official Document Introduction</h1>
 <p align="center" class="version">Version 0.1</p>
 
+[**Click here to view the course video**](https://drive.google.com/open?id=1WykHwDk0sxMrXhC1tS9TAoXbsiJ9joyk)
+
 ### 1. What is Ontology? 
 - [Ontology documentation](https://ontio.github.io/documentation/)
 - [New Ontology documentation](https://dev-docs.ont.io/)
@@ -34,9 +36,6 @@
 
 ### 8. How to use dapi 
 - [dapi tutorial](https://ontio.github.io/documentation/ontology_dapp_dev_tutorial_en.html)
-
-
-[Click here to view vedio](https://drive.google.com/open?id=1WykHwDk0sxMrXhC1tS9TAoXbsiJ9joyk)
 
 ```
 Please feel free to give any suggestion
