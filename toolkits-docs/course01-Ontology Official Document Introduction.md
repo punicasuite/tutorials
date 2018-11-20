@@ -36,7 +36,7 @@
 - [dapi tutorial](https://ontio.github.io/documentation/ontology_dapp_dev_tutorial_en.html)
 
 
-[Click here to view vedio](https://v.qq.com/txp/iframe/player.html?vid=u0784b610k9)
+[Click here to view vedio](https://drive.google.com/open?id=1WykHwDk0sxMrXhC1tS9TAoXbsiJ9joyk)
 
 ```
 Please feel free to give any suggestion
