@@ -1,6 +1,8 @@
 <h1 align="center">How to Use Cyano Wallet</h1>
 <p align="center" class="version">Version 0.1</p>
 
+[**Click here to view the course video**](https://drive.google.com/open?id=1jIvujqAiQTXv4E4fNFBJETL06bdXF013)
+
 ## 1. What is Cyano wallet
 Cyano Wallet is a wallet application based on the Google and Firefox plug-in Web Extension, which implements ONT ID, wallet management, and Ontology blockchain interaction, supporting and interacting with dApp at the same time.
 
