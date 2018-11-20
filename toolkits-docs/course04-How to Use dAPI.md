@@ -128,4 +128,9 @@ You can also initiate a transfer by selecting Asset->Make Transfer where you'll 
 
 ![Cyano Wallet Confirm](http://upload-images.jianshu.io/upload_images/150344-b36e69f45bcf25c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
+```
+Please feel free to give any suggestion
+Contact: Yue Zhao 
+Wechat: 16621171248
+Email: messixaviinsta0303@163.com
+```
