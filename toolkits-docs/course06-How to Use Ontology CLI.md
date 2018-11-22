@@ -120,7 +120,7 @@ Delete an account
 
 Import an account
 ```
-./ontology account import
+./ontology account import -s=./source_wallet.dat
 ```
 
 ## 4. Asset management 
