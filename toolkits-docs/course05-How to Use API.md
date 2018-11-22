@@ -1,6 +1,8 @@
 <h1 align="center">How to Use  Rpc/Restful/Websocket API</h1>
 <p align="center" class="version">Version 0.1</p>
 
+[**Click here to view the course video**](https://drive.google.com/open?id=1GTrkHNu2t0q4dO9u7JNHaoQakERsXe7P)
+
 ## 1. The introduction of Ontology-API
 
 Rpc API: [http://dev-docs.ont.io/#/docs-en/API/01-rpc_api](http://dev-docs.ont.io/#/docs-en/API/01-rpc_api)
