@@ -1,6 +1,8 @@
 <h1 align="center">How to Use Ontology CLI (1)</h1>
 <p align="center" class="version">Version 0.1</p>
 
+[**Click here to view the course video**](https://drive.google.com/open?id=1_Oqzr6zIiaV_sFXcjCMeS7SsUoCWgOme)
+
 ## 1. What is Ontology CLI
 
 Ontology CLI is an Ontology node command line client for starting and managing Ontology nodes, managing user wallets, sending transactions, and deploying and invoking smart contracts.
