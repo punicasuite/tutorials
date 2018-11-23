@@ -73,6 +73,14 @@ You will be notified about the progress of invocation through notifications and 
 
 If you want to debug a smart contract  instead of invocation, pressing the `Debug` button. You can use standard debug features of VSCode like StepIn, StepOut, Next, Continue, Restart, Stop and breakpoints together with variables preview and set.
 
-## 4. Extension author
+## One more thing
+
+punica-init-default-box 
+
+```
+git clone https://github.com/punica-box/punica-init-default-box.git
+```
+
+## Extension author
 
 - **Matus Zamborsky** - _Initial work_ - [Backslash47](https://github.com/backslash47)
