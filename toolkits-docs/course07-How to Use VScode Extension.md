@@ -81,6 +81,11 @@ punica-init-default-box
 git clone https://github.com/punica-box/punica-init-default-box.git
 ```
 
+OEP-4 smart contract
+```
+https://github.com/tonyclarking/python-template/blob/master/OEP4Sample/OEP4Sample.py
+```
+
 ## Extension author
 
 - **Matus Zamborsky** - _Initial work_ - [Backslash47](https://github.com/backslash47)
