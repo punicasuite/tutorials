@@ -1,4 +1,4 @@
-<h1 align="center">How to Use VSCode</h1>
+<h1 align="center">How to Use VSCode Extension</h1>
 <p align="center" class="version">Version 0.1</p>
 
 ## 1. What is VSCode Extension for Ontology
