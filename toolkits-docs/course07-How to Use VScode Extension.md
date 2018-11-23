@@ -5,7 +5,7 @@
 
 Visual Studio Code combines the simplicity of a source code editor with powerful developer tooling, like IntelliSense code completion and debugging.
 
-Before start, please check you have download [VSCode](https://code.visualstudio.com/).This extension adds support for development and testing of smart contracts on Ontology blockchain. And please disable `pylint` when VSCode recommends it to you.
+Before start, please check you have download [VSCode](https://code.visualstudio.com/).This extension adds support for development and testing of smart contracts on Ontology blockchain. **And please disable `pylint` when VSCode recommends it to you.**
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/ontio-community/bounty-program-report/master/image/vscode.png" >
