@@ -20,6 +20,8 @@ Query transaction execution information
 ./Ontology info status <TxHash>
 ```
 
+Among them, State represents the execution result of the transaction. The value of State is 1, indicating that the transaction execution is successful. When the State value is 0, it indicates that the execution failed. GasConsumed indicates the ONG consumed by the transaction execution. Notify represents the Event log output when the transaction is executed. Different transactions may output different event logs.
+
 ## 2. Smart contract deployment and invocation
 
 Smart contract operations support the deployment of NeoVM smart contract, and the pre-execution and execution of NeoVM smart contract.
