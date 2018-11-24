@@ -90,9 +90,9 @@ Contract Address:806fbee1fcfb554af47844edd4d4ce2918737747
 TxHash:99d719f51837acfa48f9cd2a21983fb993bc8d5a763b497802f7b872be2338fe
 ```
 
-### 2.2 Smart contract execution
+### 2.2 Smart contract invocation
 
-**Smart contract execution parameters:**
+**Smart contract invocation parameters:**
 
 --wallet, -w The wallet parameter specifies the account wallet path for smart contract execution. Default: "./wallet.dat".
 
