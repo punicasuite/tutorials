@@ -104,7 +104,7 @@ TxHash:99d719f51837acfa48f9cd2a21983fb993bc8d5a763b497802f7b872be2338fe
 
 --address The address parameter specifies the calling contract address.
 
---params The params parameter is used to input the parameters of the contract invocation. The input parameters need to be encoded as described above.
+--params The params parameter is used to input the parameters of the contract invocation. The input parameters need to be encoded as described above. Params format: `string:method,[string:arg1,int:arg2]`.
 
 --prepare, -p The prepare parameter indicates that the current execution is a pre-executed contract. The transactions executed will not be packaged into blocks, nor will they consume any ONG. Pre-execution will return the contract method's return value, as well as the gas limit required for the current call.
 
