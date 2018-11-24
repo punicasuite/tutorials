@@ -20,6 +20,26 @@ Query transaction execution information
 ./Ontology info status <TxHash>
 ```
 
+result:
+```
+{
+   "TxHash": "4c00674d96b1d3d2c8152b905cae6f87fff0ec8acf28ca3e7465aac59de814a1",
+   "State": 1,
+   "GasConsumed": 0,
+   "Notify": [
+      {
+         "ContractAddress": "ff00000000000000000000000000000000000001",
+         "States": [
+            "transfer",
+            "TA587BCw7HFwuUuzY1wg2HXCN7cHBPaXSe",
+            "TA5gYXCSiUq9ejGCa54M3yoj9kfMv3ir4j",
+            10
+         ]
+      }
+   ]
+}
+```
+
 Among them, State represents the execution result of the transaction. The value of State is 1, indicating that the transaction execution is successful. When the State value is 0, it indicates that the execution failed. GasConsumed indicates the ONG consumed by the transaction execution. Notify represents the Event log output when the transaction is executed. Different transactions may output different event logs.
 
 ## 2. Smart contract deployment and invocation
