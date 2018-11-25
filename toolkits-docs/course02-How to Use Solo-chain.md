@@ -71,11 +71,13 @@ You can refer to [this document](http://punica.ont.io/tutorials/Learning-SmartX-
 
 ![new account](https://upload-images.jianshu.io/upload_images/150344-2dc15c881913de5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-**The private node ip/address in setting should be 127.0.0.1**
 
 ![public address](https://upload-images.jianshu.io/upload_images/150344-f46765ac09c6ef8f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 4.3 Transfer ONG to the new account by solo-chain
+
+
+**NOTE: You need to select Private-Net at first and then set the private node ip/address to be 127.0.0.1 in the setting**
 
 ![transfer ONG](https://upload-images.jianshu.io/upload_images/150344-24ba027e878a9bce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
