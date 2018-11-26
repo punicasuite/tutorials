@@ -26,7 +26,9 @@ A service to facilitate account management and secure signing of messages. The s
 
 ### 2.1 Install by release version
 
-**Now, you can download [release version](https://github.com/ontio/ontology/releases).**
+**Now, you can download the [release version](https://github.com/ontio/ontology/releases) directly.**
+
+![download](https://upload-images.jianshu.io/upload_images/150344-8f4b1fa78dc552fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 2.2 Install by terminal
 
@@ -112,24 +114,24 @@ POST
 #### Request structure
 ```
 {
-qid: "XXX",      // Request ID. The response will echo back the same qid
-method: "XXX",   // Requested method name
-account: "XXX",  // Account for sign
-pwd: "XXX",      // Account password
-params: {}       // Input parameters for the requested method
+  qid: "XXX",      // Request ID. The response will echo back the same qid
+  method: "XXX",   // Requested method name
+  account: "XXX",  // Account for sign
+  pwd: "XXX",      // Account password
+  params: {}       // Input parameters for the requested method
 }
 ```
 
 #### Response structure
 ```
 {
-qid: "XXX",         // Request ID
-method: "XXX",      // Requested method name
-result: {           // Response result
-signed_tx: "XXX"  // Signed transaction
-},
-error_code: 0,      // Error code，zero represents success, non-zero represents failure
-error_info: ""      // Error description
+  qid: "XXX",         // Request ID
+  method: "XXX",      // Requested method name
+  result: {           // Response result
+    signed_tx: "XXX"  // Signed transaction
+  },
+  error_code: 0,      // Error code，zero represents success, non-zero represents failure
+  error_info: ""      // Error description
 }
 ```
 
@@ -166,7 +168,7 @@ None
 **Response**
 ```
 {
-"account": "XXX"             // The address of account created by sigsvr
+  "account": "XXX"             // The address of account created by sigsvr
 }
 ```
 
@@ -175,23 +177,23 @@ None
 Request:
 ```
 {
-"qid": "t",
-"method": "createaccount",
-"pwd": "XXXX",              // The unlock password of account created by sigsvr
-"params": {}
+  "qid": "t",
+  "method": "createaccount",
+  "pwd": "XXXX",              // The unlock password of account created by sigsvr
+  "params": {}
 }
 ```
 
 Response:
 ```
 {
-"qid": "t",
-"method": "createaccount",
-"result": {
-"account": "AG9nms6VMc5dGpbCgrutsAVZbpCAtMcB3W"
-},
-"error_code": 0,
-"error_info": ""
+  "qid": "t",
+  "method": "createaccount",
+  "result": {
+    "account": "AG9nms6VMc5dGpbCgrutsAVZbpCAtMcB3W"
+  },
+  "error_code": 0,
+  "error_info": ""
 }
 ```
 
@@ -206,7 +208,7 @@ Export accounts method will export all accounts in wallet data into a `.dat` wal
 
 ```
 {
-"wallet_path": "XXX"   // Path to save .dat wallet file to. If left blank, will default to the sigsvr default path.
+  "wallet_path": "XXX"   // Path to save .dat wallet file to. If left blank, will default to the sigsvr default path.
 }
 ```
 
@@ -214,8 +216,8 @@ Export accounts method will export all accounts in wallet data into a `.dat` wal
 
 ```
 {
-"wallet_file": "XXX"   // Full path of exported wallet file.
-"account_num": "XXX"   // Number of accounts exported in the wallet file.
+  "wallet_file": "XXX"   // Full path of exported wallet file.
+  "account_num": "XXX"   // Number of accounts exported in the wallet file.
 }
 ```
 
@@ -224,23 +226,23 @@ Export accounts method will export all accounts in wallet data into a `.dat` wal
 Request:
 ```
 {
-"qid": "t",
-"method": "exportaccount",
-"params": {}
+  "qid": "t",
+  "method": "exportaccount",
+  "params": {}
 }
 ```
 
 Response:
 ```
 {
-"qid": "t",
-"method": "exportaccount",
-"result": {
-"wallet_file": "./wallet_2018_08_03_23_20_12.dat",
-"account_num": 9
-},
-"error_code": 0,
-"error_info": ""
+  "qid": "t",
+  "method": "exportaccount",
+  "result": {
+    "wallet_file": "./wallet_2018_08_03_23_20_12.dat",
+    "account_num": 9
+  },
+  "error_code": 0,
+  "error_info": ""
 }
 ```
 
@@ -258,14 +260,14 @@ sigdata
 **Request parameters**
 ```
 {
-"raw_data": "XXX"       // Unsigned data, Note that data must be encode as a hex string.
+  "raw_data": "XXX"       // Unsigned data, Note that data must be encode as a hex string.
 }
 ```
 
 **Response result**
 ```
 {
-"signed_data": "XXX"    // Signed data, Note that data was encoded as a hex string.
+  "signed_data": "XXX"    // Signed data, Note that data was encoded as a hex string.
 }
 ```
 
@@ -274,26 +276,26 @@ sigdata
 Request:
 ```
 {
-"qid": "t",
-"method": "sigdata",
-"account": "XXX",
-"pwd": "XXX",
-"params": {
-"raw_data": "48656C6C6F20776F726C64" // Hello world
-}
+  "qid": "t",
+  "method": "sigdata",
+  "account": "XXX",
+  "pwd": "XXX",
+  "params": {
+      "raw_data": "48656C6C6F20776F726C64" // Hello world
+  }
 }
 ```
 
 Response:
 ```
 {
-"qid": "t",
-"method": "sigdata",
-"result": {
-"signed_data": "cab96e...7260cb"
-},
-"error_code": 0,
-"error_info": ""
+  "qid": "t",
+  "method": "sigdata",
+  "result": {
+    "signed_data": "cab96e...7260cb"
+  },
+  "error_code": 0,
+  "error_info": ""
 }
 ```
 
@@ -309,14 +311,14 @@ sigrawtx
 **Request parameters**
 ```
 {
-"raw_tx": "XXX"      // Unsigned transaction
+  "raw_tx": "XXX"      // Unsigned transaction
 }
 ```
 
 **Response result**
 ```
 {
-"signed_tx": "XXX"   //Signed transaction
+  "signed_tx": "XXX"   //Signed transaction
 }
 ```
 
@@ -325,26 +327,26 @@ sigrawtx
 Request:
 ```
 {
-"qid": "1",
-"method": "sigrawtx",
-"account": "XXX",
-"pwd": "XXX",
-"params": {
-"raw_tx": "00d141...0a0000"
-}
+  "qid": "1",
+  "method": "sigrawtx",
+  "account": "XXX",
+  "pwd": "XXX",
+  "params": {
+    "raw_tx": "00d141...0a0000"
+  }
 }
 ```
 
 Response:
 ```
 {
-"qid": "1",
-"method": "sigrawtx",
-"result": {
-"signed_tx": "00d141...00c6bb"
-},
-"error_code": 0,
-"error_info": ""
+  "qid": "1",
+  "method": "sigrawtx",
+  "result": {
+    "signed_tx": "00d141...00c6bb"
+  },
+  "error_code": 0,
+  "error_info": ""
 }
 ```
 
@@ -370,13 +372,13 @@ sigtransfertx
 **Request parameters**
 ```
 {
-"gas_price": XXX,  // gasprice
-"gas_limit": XXX,  // gaslimit
-"asset": "ont",    // asset: ont or ong
-"from": "XXX",     // Payment account
-"to": "XXX",       // Receipt address
-"amount": "XXX"    // Transfer amount. Note that since the precision of ong is 9, it is necessary to multiply the actual transfer amount by 1000000000 when making ong transfer.
-"payer": "XXX",    // (OPTIONAL) The fee payer's account address
+  "gas_price": XXX,  // gasprice
+  "gas_limit": XXX,  // gaslimit
+  "asset": "ont",    // asset: ont or ong
+  "from": "XXX",     // Payment account
+  "to": "XXX",       // Receipt address
+  "amount": "XXX"    // Transfer amount. Note that since the precision of ong is 9, it is necessary to multiply the actual transfer amount by 1000000000 when making ong transfer.
+  "payer": "XXX",    // (OPTIONAL) The fee payer's account address
 }
 ```
 
@@ -384,7 +386,7 @@ sigtransfertx
 
 ```
 {
-"signed_tx": "XXX" // Signed transaction
+  "signed_tx": "XXX" // Signed transaction
 }
 ```
 
@@ -393,31 +395,31 @@ sigtransfertx
 Request:
 ```
 {
-"qid": "t",
-"method": "sigtransfertx",
-"account": "XXX",
-"pwd": "XXX",
-"params": {
-"gas_price": 0,
-"gas_limit": 20000,
-"asset": "ont",
-"from": "ATACcJPZ8eECdWS4ashaMdqzhywpRTq3oN",
-"to": "AeoBhZtS8AmGp3Zt4LxvCqhdU4eSGiK44M",
-"amount": "10"
-}
+  "qid": "t",
+  "method": "sigtransfertx",
+  "account": "XXX",
+  "pwd": "XXX",
+  "params": {
+    "gas_price": 0,
+    "gas_limit": 20000,
+    "asset": "ont",
+    "from": "ATACcJPZ8eECdWS4ashaMdqzhywpRTq3oN",
+    "to": "AeoBhZtS8AmGp3Zt4LxvCqhdU4eSGiK44M",
+    "amount": "10"
+  }
 }
 ```
 
 Response:
 ```
 {
-"qid": "t",
-"method": "sigtransfertx",
-"result": {
-"signed_tx": "00d118...efea9c"
-},
-"error_code": 0,
-"error_info": ""
+  "qid": "t",
+  "method": "sigtransfertx",
+  "result": {
+    "signed_tx": "00d118...efea9c"
+  },
+  "error_code": 0,
+  "error_info": ""
 }
 ```
 
