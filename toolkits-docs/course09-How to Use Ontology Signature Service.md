@@ -26,7 +26,7 @@ A service to facilitate account management and secure signing of messages. The s
 
 ### 2.1 Install by release version
 
-**Now, you can download [release version](https://github.com/ontio/ontology/releases) directly without following the steps below.**
+**Now, you can download [release version](https://github.com/ontio/ontology/releases).**
 
 ### 2.2 Install by terminal
 
