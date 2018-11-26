@@ -24,6 +24,8 @@ A service to facilitate account management and secure signing of messages. The s
 
 ## 2. How to install signature service
 
+**Now, you can download [release version](https://github.com/ontio/ontology/releases) directly without following the steps below.**
+
 The signature service is a part of the [core Ontology repository](https://github.com/ontio/ontology). Download the core Ontology protocol repository and install all dependencies in the proper directory `$GOPATH/src/github.com/ontio`
 
 ```
