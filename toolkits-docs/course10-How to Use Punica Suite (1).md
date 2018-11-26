@@ -84,7 +84,7 @@ For how to install solo-chain and VSCode extension, please refer to [How to Use 
 
 ## 3. Get started
 
-### Initializing a New Project
+### 3.1 Initializing a New Project
 
 You can create an empty Punica project with no smart contracts using the `init` command.
 
@@ -111,3 +111,30 @@ Options:
 ```
 
 **Note**: If you are not running punica-cli in the root directory of your project, you need to use the `-p` or `--project` option to specify your DApp project path.
+
+### 3.2 Compile, deploy, invoke
+
+Compile a smart contract
+```
+punica compile
+```
+
+Deploy a smart contract
+```
+punica deploy
+```
+
+Display the list of functions that can be invoked and then invoke a function
+```
+punica invoke list
+
+punica invoke --functions testHello
+```
+
+## Author
+```
+Please feel free to give any suggestion
+Contact: Yue Zhao 
+Wechat: 16621171248
+Email: messixaviinsta0303@163.com
+```
