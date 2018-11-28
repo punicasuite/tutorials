@@ -1,4 +1,6 @@
-#ontology-java-sdk介绍
+ontology-java-sdk介绍
+======
+
 
 项目地址为：https://github.com/ontio/ontology-java-sdk
 
@@ -9,14 +11,18 @@
 ---
 
 
-##1.私有链环境
+1.私有链环境
+======
+
 solochain的介绍和使用说明地址：https://punica.ont.io/docs/soloChain/#Installation
 
 为了便于测试和开发，Ontology官方提供一个私有链环境工具solochain，简单易用，用户只需要启动该工具，就相当于启动了一个区块链，链的节点只有该用户一个。
 
 
-##2. 用户Java项目
-###（1）引入ontology-java-sdk    
+2.用户Java项目
+======
+（1）引入ontology-java-sdk
+------
 用户Java项目，通过引入ontology-java-sdk，实现与私有链进行连接操作，与数字资产合约进行交互行为。具体操作为：在项目poml文件中加入以下代码，目的是引入sdk的JAR包，满足后续功能使用需要：
 	
 	<dependency>
@@ -25,7 +31,8 @@ solochain的介绍和使用说明地址：https://punica.ont.io/docs/soloChain/#
     	<version>1.0.6</version>
 	</dependency>
 
-###（2）连接私有链
+（2）连接私有链
+------
 在Java项目中，通过设置链的连接方式完成与私有链的连接，最后生成连接对象OntSdk，用于实现后续与链的交与操作，比如部署数字资产合约、合约初始化、转账、查询余额、批量转账、授权和交易等，通过此对象来完成这些功能。
    
 	String ip = "http://127.0.0.1";
@@ -39,8 +46,8 @@ solochain的介绍和使用说明地址：https://punica.ont.io/docs/soloChain/#
     wm.setDefaultConnect(wm.getRestful());
 
 
-##3.数字资产功能介绍
-###（0）数字资产合约（smartX）
+3.数字资产合约
+======
 参考资料：https://smartx.ont.io
 
 标准OEP4数字资产合约地址为：  https://github.com/tonyclarking/python-template/blob/master/OEP4Sample/OEP4Sample.py
@@ -51,9 +58,11 @@ solochain的介绍和使用说明地址：https://punica.ont.io/docs/soloChain/#
 将此内容保存为`wallet.dat`，然后选择登陆，密码为`123456`。在smartX工具里面，创建`Python`项目，然后使用OEP4数字资产模板，编写完成之后选择编译，将编译成功后的AVM字节码存储备用。
 
 
+4.数字资产功能介绍
+======
 
-
-###（1）部署合约
+（1）部署合约
+------
 将在smartX上编译完成的数字资产合约的AVM字节码存储起来，用于向私有链环境部署数字资产合约，具体代码如下：
 
     String contractCode = "0131c.....";//AVM字节码
@@ -66,7 +75,8 @@ solochain的介绍和使用说明地址：https://punica.ont.io/docs/soloChain/#
 
 
 
-###（2）合约初始化
+（2）合约初始化
+------
 在Ontology网络上部署的标准OEP4数字资产合约，必须先初始化合约，将合约的参数等内容写入私有链中，否则合约无法正常使用，具体代码如下：
 
     String result = ontSdk.neovm().oep4().sendInit(acct,account,20000,500);
@@ -75,13 +85,15 @@ solochain的介绍和使用说明地址：https://punica.ont.io/docs/soloChain/#
     System.out.println(ontSdk.neovm().oep4().queryName());
 
 
-###（3）查询余额
+（3）查询余额
+------
 标准OEP4数字资产合约定义__balanceOf__(account)方法查询账户余额的行为，具体代码如下：
 
       ontSdk.neovm().oep4().queryBalanceOf(account.getAddressU160().toBase58())
 
 
-###（4）交易转账
+（4）交易转账
+------
 标准OEP4数字资产合约定义__transfer__(from_acct,to_acct,amount)方法执行账户之间的转账行为，语义为from_acct向账户toacct转账数值为amount的数字资产，具体代码如下：
 
     showBalance(ontSdk,new Account[]{account, acct});
@@ -91,7 +103,8 @@ solochain的介绍和使用说明地址：https://punica.ont.io/docs/soloChain/#
 
 
 
-###（5）授权 + 查询 + 交易
+（5）授权 + 查询 + 交易
+------
 标准OEP4数字资产合约定义__approve__(owner,spender,amount)方法执行授权行为，语义为账户owner向使用者spender授权可使用自己账户数值为amount的数字资产；定义__allowance__(owner,spender)方法执行查询授权行为，语义为查询owner向spender授权的数值，具体代码如下：
     
 	 // account授权给acct1账户，额度为1000
@@ -107,7 +120,8 @@ solochain的介绍和使用说明地址：https://punica.ont.io/docs/soloChain/#
 
 
 
-###（6）批量转账
+（6）批量转账
+------
 标准OEP4数字资产合约定义__transferMulti__(args)方法执行批量转账的行为，语义为依据args的内容分批次完成转账功能，具体代码如下：
    
     showBalance(ontSdk,new Account[]{account, acct, acct1, acct2});
