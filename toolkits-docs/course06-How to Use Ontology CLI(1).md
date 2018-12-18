@@ -117,7 +117,7 @@ Modify account info
 
 Delete an account
 ```
-/ontology account del <address|index|label>
+./ontology account del <address|index|label>
 ```
 
 Import an account
