@@ -43,12 +43,12 @@ from boa.interop.System.Blockchain import GetHeader
 
 def Main(operation, args):
     if operation == 'demo':
-        block_height=args[0]
-        return demo(block_height)
+        return demo()
     return False
 
 
-def demo(block_height):
+def demo():
+    block_height=10
     header=GetHeader(block_height)
     Notify(header)
     return header
