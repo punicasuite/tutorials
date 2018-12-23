@@ -71,6 +71,7 @@ def demo():
     # tx_hash="9f270aa3a4c13c46891ff0e1a2bdb3ea0525669d414994aadf2606734d0c89c1"
     tx_hash=bytearray(b"\xc1\x89\x0c\x4d\x73\x06\x26\xdf\xaa\x94\x49\x41\x9d\x66\x25\x05\xea\xb3\xbd\xa2\xe1\xf0\x1f\x89\x46\x3c\xc1\xa4\xa3\x0a\x27\x9f")
     tx=GetTransactionByHash(tx_hash)
+    return tx
 ```
 
 #### GetTransactionHeight
@@ -88,6 +89,7 @@ def demo():
     # tx_hash="9f270aa3a4c13c46891ff0e1a2bdb3ea0525669d414994aadf2606734d0c89c1"
     tx_hash=bytearray(b"\xc1\x89\x0c\x4d\x73\x06\x26\xdf\xaa\x94\x49\x41\x9d\x66\x25\x05\xea\xb3\xbd\xa2\xe1\xf0\x1f\x89\x46\x3c\xc1\xa4\xa3\x0a\x27\x9f")
     height=GetTransactionHeight(tx_hash)
+    return height
 ```
 
 #### GetContract
