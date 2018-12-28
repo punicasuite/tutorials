@@ -31,12 +31,14 @@ For more details, you can view the [API-doc](http://dev-docs.ont.io/#/docs-en/D
 ## 2. How to use Storage API
 
 ```
-from ontology.interop.System.Storage import GetContext, Get, Put, Delete
+from ontology.interop.System.Storage import GetContext, Get, Put, Delete, GetReadOnlyContext
 from ontology.interop.System.Runtime import Notify
 
 def Main(operation,args):
     if operation == 'get_sc':
         return get_sc()
+    if operation == 'get_read_only_sc':
+        return get_read_only_sc()
     if operation == 'get_data':
         key=args[0]
         return get_data(key)
@@ -51,6 +53,9 @@ def Main(operation,args):
 
 def get_sc():
     return GetContext()
+    
+def get_read_only_sc():
+    return GetReadOnlyContext()
 
 def get_data(key):
     sc=GetContext() 
