@@ -7,6 +7,7 @@ Storage API supports basic storage operation such as get, put, and delete data.
 
 Storage API:
 * The GetContext() is used for calling storage of a smart contract.
+* The GetReadOnlyContext() is used for calling storage of a smart contract. But you do not have right to put and delete any data into persistent storage area. 
 * The Get() is used for getting data from storage
 * The Put() is used for saving data to storage
 * The Delete() is used for deleting data from storage
@@ -15,6 +16,7 @@ Storage API:
 | API                                      | Return Value            | Description                               |
 | ---------------------------------------- | -------------- | -------------------------------- |
 | Storage.GetContext                   | StorageContext | Get the current storage context                       |
+| Storage.GetReadOnlyContext | Read-only StorageContext | Get the current read-only storage context
 | Storage.Get(StorageContext,string)       | byte[]         | Query operation, query the corresponding value by key in the persistent storage area   |
 | Storage.Get(StorageContext,byte[])       | byte[]         | Query operation, query the corresponding value by key in the persistent storage area   |
 | Storage.Put(StorageContext, string,string) | void       |Insert operation, inserting data as key-value format into a persistent storage area |
