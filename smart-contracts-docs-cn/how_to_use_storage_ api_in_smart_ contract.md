@@ -20,35 +20,35 @@ from ontology.interop.System.Storage import GetContext, Get, Put, Delete
 from ontology.interop.System.Runtime import Notify
 
 def Main(operation,args):
-if operation == 'get_sc':
-return get_sc()
-if operation == 'get_data':
-key=args[0]
-return get_data(key)
-if operation == 'save_data':
-key=args[0]
-value=args[1]
-return save_data(key, value)
-if operation == 'delete_data':
-key=args[0]
-return delete_data(key)
-return False
+    if operation == 'get_sc':
+        return get_sc()
+    if operation == 'get_data':
+        key=args[0]
+        return get_data(key)
+    if operation == 'save_data':
+        key=args[0]
+        value=args[1]
+        return save_data(key, value)
+    if operation == 'delete_data':
+        key=args[0]
+        return delete_data(key)
+    return False
 
 def get_sc():
-return GetContext()
+    return GetContext()
 
 def get_data(key):
-sc=GetContext() 
-data=Get(sc,key)
-Notify(data)
-
+    sc=GetContext() 
+    data=Get(sc,key)
+    Notify(data)
+    
 def save_data(key, value):
-sc=GetContext() 
-Put(sc,key,value)
-
+    sc=GetContext() 
+    Put(sc,key,value)
+    
 def delete_data(key):
-sc=GetContext() 
-Delete(sc,key)
+    sc=GetContext() 
+    Delete(sc,key)
 ```
 
 Note1: Put, delete, and get operation should be implemented in the same contract. Otherwise, the function you run would fail to execution.
