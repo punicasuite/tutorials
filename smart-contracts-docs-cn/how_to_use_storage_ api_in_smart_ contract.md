@@ -6,12 +6,11 @@
 Storage API supports basic storage operation such as get, put, and delete data. 
 
 Storage API:
-* The GetContext is used for calling storage of a smart contract.
-* The Get is used for getting data from storage
-* The Put is used for saving data to storage
-* The Delete is used for deleting data from storage
+* The GetContext() is used for calling storage of a smart contract.
+* The Get() is used for getting data from storage
+* The Put() is used for saving data to storage
+* The Delete() is used for deleting data from storage
 
-Storage API：
 
 | API                                      | Return Value            | Description                               |
 | ---------------------------------------- | -------------- | -------------------------------- |
