@@ -14,15 +14,15 @@ Storage API:
 
 | API                                      | Return Value            | Description                               |
 | ---------------------------------------- | -------------- | -------------------------------- |
-| Storage.CurrentContext                   | StorageContext | Get the current storage context                       |
+| Storage.GetContext                   | StorageContext | Get the current storage context                       |
 | Storage.Get(StorageContext,string)       | byte[]         | Query operation, query the corresponding value by key in the persistent storage area   |
 | Storage.Get(StorageContext,byte[])       | byte[]         | Query operation, query the corresponding value by key in the persistent storage area   |
 | Storage.Put(StorageContext, string,string) | void       |Insert operation, inserting data as key-value format into a persistent storage area |
 | Storage.Put(StorageContext, byte[],byte[]) | void       | Insert operation, inserting data as key-value format into a persistent storage area |
 | Storage.Put(StorageContext, byte[],string) | void       | Insert operation, inserting data as key-value format into a persistent storage area |
 | Storage.Put(StorageContext, string,byte[]) | void       | Insert operation, inserting data as key-value format into a persistent storage area |
-| Storage.Put(StorageContext, string,BigInteger) | void       | Insert operation, inserting data as key-value format into a persistent storage area |
-| Storage.Put(StorageContext, byte[],BigInteger) | void       | Insert operation, inserting data as key-value format into a persistent storage area |
+| Storage.Put(StorageContext, string, integer) | void       | Insert operation, inserting data as key-value format into a persistent storage area |
+| Storage.Put(StorageContext, byte[], integer) | void       | Insert operation, inserting data as key-value format into a persistent storage area |
 | Storage.Delete(StorageContext, byte[])   | void           | Delete operation, delete the corresponding value by key in the persistent storage area  |
 | Storage.Delete(StorageContext, string)   | void           | Delete operation, delete the corresponding value by key in the persistent storage area  |
 
