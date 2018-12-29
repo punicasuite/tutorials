@@ -116,6 +116,7 @@ def deserialize_from_bytearray(key):
     byte_data = Get(sc, key)
     data = Deserialize(byte_data)
     return data
+```
 
 `Base58ToAddress`: transfer a base58 address to address in form of byte array
 
