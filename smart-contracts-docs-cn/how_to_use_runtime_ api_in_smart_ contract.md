@@ -140,4 +140,21 @@ def demo():
     Log(base58_addr)
 ```
 
+CheckWitness: Verify operational permissions of user or contract 
+```
+from ontology.interop.System.Runtime import CheckWitness, Notify
+from ontology.interop.Ontology.Runtime import Base58ToAddress
+from ontology.builtins import bytearray
 
+def Main(operation):
+    if operation == 'demo':
+        return demo()
+    return False
+
+
+def demo():
+    addr=Base58ToAddress("AW8hN1KhHE3fLDoPAwrhtjD1P7vfad3v8z")
+    res=CheckWitness(addr)
+    Notify(res)
+    return res
+```
