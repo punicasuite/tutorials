@@ -1,7 +1,17 @@
 <h1 align="center">How to Transfer ONT/ONG in Smart Contract</h1>
 <p align="center" class="version">Version 0.1</p>
 
-## 1. Transfer ONT/ONG
+## 1. Introduction
+
+| API                          | Return Value  | Description                                       |
+| ---------------------------- | ---- | ---------------------------------------- |
+| Invoke                 | book |   Invoke a native contract         |
+| state | string |      Build transfer structure             |
+
+For more details, you can view the [API-doc](http://dev-docs.ont.io/#/docs-en/DeveloperGuide/smartcontract/05-sc-api) and the [source code](https://github.com/ontio/ontology-python-compiler) here.
+
+
+## 2. Transfer ONT/ONG
 
 `state` is used for building transfer structure.
 
@@ -52,7 +62,7 @@ def transfer(from_acct, to_acct, ont_amount, ong_amount):
         Notify('CheckWitness failed')
 ```
 
-## 2. Transfer ONG to self contract
+## 3. Transfer ONG to self contract
 
 ```
 from ontology.interop.System.Runtime import Notify, CheckWitness
@@ -84,7 +94,7 @@ def transfer_ONG_to_contract(from_acct, ong_amount):
         Notify('transfer ONG failed')
 ```
 
-## 3. Check ONG balance of a contract
+## 4. Check ONG balance of a contract
 
 ```
 from ontology.interop.System.Runtime import Notify, CheckWitness
