@@ -1,7 +1,7 @@
 <h1 align="center">How to Transfer ONT/ONG in Smart Contract</h1>
 <p align="center" class="version">Version 0.1</p>
 
-## 1. How to transfer ONT/ONG
+## 1. Transfer ONT/ONG
 
 `state` is used for building transfer structure.
 
@@ -52,7 +52,7 @@ def transfer(from_acct, to_acct, ont_amount, ong_amount):
         Notify('CheckWitness failed')
 ```
 
-## 2. How to transfer ONG to self contract
+## 2. ransfer ONG to self contract
 
 ```
 from ontology.interop.System.Runtime import Notify, CheckWitness
