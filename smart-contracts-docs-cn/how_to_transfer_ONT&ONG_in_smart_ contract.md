@@ -52,7 +52,7 @@ def transfer(from_acct, to_acct, ont_amount, ong_amount):
         Notify('CheckWitness failed')
 ```
 
-## 2. ransfer ONG to self contract
+## 2. Transfer ONG to self contract
 
 ```
 from ontology.interop.System.Runtime import Notify, CheckWitness
