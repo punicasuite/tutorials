@@ -22,16 +22,16 @@ from ontology.interop.System.Contract import Destroy
 from ontology.interop.System.Runtime import Notify
 
 def Main(operation, args):
-if operation == "destroy_contract":
-return destroy_contract()
-
-return False
+    if operation == "destroy_contract":
+        return destroy_contract()
+    
+    return False
 
 
 def destroy_contract():
-Destroy()
-Notify(["The contract has been destoryed"])
-return True
+    Destroy()
+    Notify(["The contract has been destoryed"])
+    return True
 ```
 
 ## 3. Migrate
@@ -58,28 +58,28 @@ from ontology.interop.System.Contract import Destroy
 from ontology.interop.System.Runtime import Notify
 
 def Main(operation, args):
-if operation == "migrate_contract":
-if len(args) != 7:
-return False
-avm_code = args[0]
-need_storage = args[1]
-name = args[2]
-version = args[3]
-author = args[4]
-email = args[5]
-description = args[6]
-return migrate_contract(avm_code)
-
-return False
+    if operation == "migrate_contract":
+        if len(args) != 7:
+            return False
+        avm_code = args[0]
+        need_storage = args[1]
+        name = args[2]
+        version = args[3]
+        author = args[4]
+        email = args[5]
+        description = args[6]
+        return migrate_contract(avm_code)
+        
+    return False
 
 
 def migrate_contract(avm_code, need_storage, name, version, author, email, description):
-res = Migrate(avm_code, need_storage, name, version, author, email, description)
-if res:
-Notify(["Migrate successfully"])
-return True
-else:
-return False
+    res = Migrate(avm_code, need_storage, name, version, author, email, description)
+    if res:
+        Notify(["Migrate successfully"])
+        return True
+    else:
+        return False
 ```
 
 Follow up question: How to improve this contract? 
