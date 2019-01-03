@@ -24,7 +24,7 @@ from ontology.interop.System.Runtime import Notify
 def Main(operation, args):
     if operation == "destroy_contract":
         return destroy_contract()
-    
+
     return False
 
 
@@ -69,7 +69,7 @@ def Main(operation, args):
         email = args[5]
         description = args[6]
         return migrate_contract(avm_code)
-        
+
     return False
 
 
@@ -83,4 +83,5 @@ def migrate_contract(avm_code, need_storage, name, version, author, email, descr
 ```
 
 Follow up question: How to improve this contract? 
+
 Answer: Add CheckWitness(). 
