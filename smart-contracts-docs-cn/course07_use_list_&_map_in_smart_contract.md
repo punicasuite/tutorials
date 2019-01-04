@@ -1,6 +1,8 @@
 <h1 align="center">How to Use List and Map in Smart Contract</h1>
 <p align="center" class="version">Version 0.1</p>
 
+## 1. How to use list
+
 List: The most basic data structure in Python is the sequence.
 
 Contract about list operation
@@ -61,6 +63,8 @@ def remove_list(element):
     return list1
 ```
 
+## 2. How to use map
+
 Contract about map operation 
 
 ```
@@ -119,4 +123,13 @@ def remove_map(key):
     Notify(["after remove, map is ", map1["key1"], map1["key2"]])
 
     return True
+```
+
+## 3. Contributing 
+
+```
+Please feel free to give any suggestion and help us make video better!
+Contact: Yue Zhao 
+Wechat: 16621171248
+Email: messixaviinsta0303@163.com
 ```
