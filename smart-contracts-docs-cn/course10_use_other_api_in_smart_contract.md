@@ -24,14 +24,14 @@ from ontology.interop.System.ExecutionEngine import GetExecutingScriptHash, GetC
 from ontology.interop.System.ExecutionEngine import GetExecutingScriptHash, GetCallingScriptHash
 
 def Main(operation, args):
-if operation == "get_contract_hash":
-return get_contract_hash()
-
-return False
+    if operation == "get_contract_hash":
+        return get_contract_hash()
+    
+    return False
 
 
 def get_contract_hash():
-return GetExecutingScriptHash()
+    return GetExecutingScriptHash()
 ```
 
 ### 2.3 GetCallingScriptHash
@@ -40,20 +40,20 @@ return GetExecutingScriptHash()
 from ontology.interop.System.ExecutionEngine import GetExecutingScriptHash, GetCallingScriptHash
 
 def Main(operation, args):
-if operation == "GetCallingScriptHash_test1":
-return GetCallingScriptHash_test1()
-if operation == "GetCallingScriptHash_test2":
-return GetCallingScriptHash_test2()
-
-return False
+    if operation == "GetCallingScriptHash_test1":
+        return GetCallingScriptHash_test1()
+    if operation == "GetCallingScriptHash_test2":
+        return GetCallingScriptHash_test2()
+    
+    return False
 
 
 def GetCallingScriptHash_test1():
-return GetCallingScriptHash()
-
-
+    return GetCallingScriptHash()
+    
+    
 def GetCallingScriptHash_test2():
-return GetCallingScriptHash()
+    return GetCallingScriptHash()
 ```
 
 ## 3. How to use Action
@@ -65,7 +65,7 @@ from ontology.interop.System.Action import RegisterAction
 
 ### 3.2 RegisterAction
 
-`RegisterAction` is used for push events. 
+`RegisterAction` is used for pushing events. 
 
 params format: string + multiple params
 
@@ -77,24 +77,24 @@ Refund = RegisterAction('refund_test', 'to', 'amount')
 
 
 def Main(operation, args):
-if operation == "test1":
-return test1()
-if operation =="test2":
-return test2()
-return False
+    if operation == "test1":
+        return test1()
+    if operation =="test2":
+        return test2()
+    return False
 
 def test1():
-a = 3
-b = 8
-c = a + b
-Transfer(a, b, c)
-return True
+    a = 3
+    b = 8
+    c = a + b
+    Transfer(a, b, c)
+    return True
 
 def test2():
-to = 'somebody'
-amount = 52
-Refund(to, amount)
-return True
+    to = 'somebody'
+    amount = 52
+    Refund(to, amount)
+    return True
 ```
 
 
