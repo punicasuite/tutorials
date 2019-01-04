@@ -77,3 +77,11 @@ Note1: Put, delete, and get operation should be implemented in the same contract
 
 Note2: The data you save in the blockchain can be accessed by anyone.
 
+## 3. Contributing 
+
+```
+Please feel free to give any suggestion and help us make video better!
+Contact: Yue Zhao 
+Wechat: 16621171248
+Email: messixaviinsta0303@163.com
+```
