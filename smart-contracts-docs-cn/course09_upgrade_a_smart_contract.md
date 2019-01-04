@@ -85,3 +85,12 @@ def migrate_contract(avm_code, need_storage, name, version, author, email, descr
 Follow up question: How to improve this contract? 
 
 Answer: Add CheckWitness(). 
+
+## 4. Contributing 
+
+```
+Please feel free to give any suggestion and help us make video better!
+Contact: Yue Zhao 
+Wechat: 16621171248
+Email: messixaviinsta0303@163.com
+```
