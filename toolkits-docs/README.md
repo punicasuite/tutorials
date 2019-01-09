@@ -8,7 +8,7 @@ Contact: Yue Zhao
 Wechat: 16621171248
 Email: messixaviinsta0303@163.com
 ```
-* Korea Version:
+* Korean Version:
 ```
 Contact: Alice/김예진
 Wechat: yejin_alice27
