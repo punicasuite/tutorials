@@ -6,14 +6,14 @@
 | API                          | Return Value  | Description                                       |
 | ---------------------------- | ---- | ---------------------------------------- |
 | Runtime.GetTime                 | uint | Return timestamp of the most recent block           |
-| Runtime.CheckWitness(hash_or_pubkey : byte[]) | bool | Verify operational permissions of user or contract                   |
+| GetCurrentBlockHash|string | Return block hash of the most recent block |
 | Runtime.Notify(object[])     | void | In smart contract, sending notifications (including socket notifications or rpc queries) to clients that are executing this smart contract |
 | Runtime.Log(string)          | void | In smart contract, sending logs ( including socket notifications) to clients that are executing this smart contract       |
 | Serialize(item) |byte array |Serializes an item into a bytearray|
 | Deserialize(item)|original type | Deserializes an item from a bytearray|
-| GetCurrentBlockHash|string | Return block hash of the most recent block |
 | Base58ToAddress(base58_address)|byte array|transfer a base58 address to address in form of byte array|
 | AddressToBase58(address)|string |transfer an address in form of byte array to a base58 address |
+| Runtime.CheckWitness(hash_or_pubkey : byte[]) | bool | Verify operational permissions of user or contract                   |
 
 For more details, you can view the [API-doc](http://dev-docs.ont.io/#/docs-en/DeveloperGuide/smartcontract/05-sc-api) and the [source code](https://github.com/ontio/ontology-python-compiler) here.
 
