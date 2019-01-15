@@ -62,7 +62,7 @@ def transfer(from_acct, to_acct, ont_amount, ong_amount):
         Notify('CheckWitness failed')
 ```
 
-## 3. Transfer ONG to self contract
+## 3. Transfer ONG to self contract 
 
 ```
 from ontology.interop.System.Runtime import Notify, CheckWitness
@@ -81,6 +81,8 @@ def Main(operation, args):
         from_acct = args[0]
         ong_amount = args[1]
         return transfer_ONG_to_contract(from_acct, ong_amount)
+    if operation == 'check_self_contract_ONG_amount':
+        return check_self_contract_ONG_amount()
     
     return False
 
@@ -92,29 +94,8 @@ def transfer_ONG_to_contract(from_acct, ong_amount):
         Notify('transfer ONG to contract successfully')
     else:
         Notify('transfer ONG failed')
-```
-
-## 4. Check ONG balance of a contract
-
-```
-from ontology.interop.System.Runtime import Notify, CheckWitness
-from ontology.interop.Ontology.Runtime import Base58ToAddress
-from ontology.interop.Ontology.Native import Invoke
-from ontology.builtins import state, bytearray
-from ontology.interop.System.ExecutionEngine import GetExecutingScriptHash
-
-# contract address 
-contract_address_ONT = bytearray(b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01')
-contract_address_ONG = bytearray(b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02')
-self_contract_address = GetExecutingScriptHash()
-
-def Main(operation, args):
-    if operation == 'check_self_contract_ONG_amount':
-        return check_self_contract_ONG_amount()
-    
-    return False
-
-
+        
+        
 def check_self_contract_ONG_amount():
     param = state(self_contract_address)
     # do not use [param]
@@ -122,7 +103,7 @@ def check_self_contract_ONG_amount():
     return res
 ```
 
-## 5. Contributing 
+## 4. Contributing 
 
 ```
 Please feel free to give any suggestion and help us make video better!
