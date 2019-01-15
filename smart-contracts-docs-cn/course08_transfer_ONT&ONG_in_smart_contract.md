@@ -43,19 +43,21 @@ def transfer(from_acct, to_acct, ont_amount, ong_amount):
     # check whether the sender is the payer
     if CheckWitness(from_acct):
         # transfer ONT
-        param = state(from_acct, to_acct, ont_amount)
-        res = Invoke(1, contract_address_ONT, 'transfer', [param])
-        if res and res == b'\x01':
-            Notify('transfer succeed')
-        else:
-            Notify('transfer failed')
+        if ont_amount > 0:
+            param = state(from_acct, to_acct, ont_amount)
+            res = Invoke(1, contract_address_ONT, 'transfer', [param])
+            if res and res == b'\x01':
+                Notify('transfer succeed')
+            else:
+                Notify('transfer failed')
         # transfer ONG
-        param = state(from_acct, to_acct, ong_amount)
-        res = Invoke(1, contract_address_ONG, 'transfer', [param])
-        if res and res == b'\x01':
-            Notify('transfer succeed')
-        else:
-            Notify('transfer failed')
+        if ong_amount > 0:
+            param = state(from_acct, to_acct, ong_amount)
+            res = Invoke(1, contract_address_ONG, 'transfer', [param])
+            if res and res == b'\x01':
+                Notify('transfer succeed')
+            else:
+                Notify('transfer failed')
     else:
         Notify('CheckWitness failed')
 ```
