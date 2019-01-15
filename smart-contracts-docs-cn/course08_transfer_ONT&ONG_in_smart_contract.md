@@ -5,7 +5,7 @@
 
 | API                          | Return Value  | Description                                       |
 | ---------------------------- | ---- | ---------------------------------------- |
-| Invoke                 | book |   Invoke a native contract         |
+| Invoke                 | byte[] |   Invoke a native contract         |
 | state | string |      Build transfer structure             |
 
 For more details, you can view the [API-doc](http://dev-docs.ont.io/#/docs-en/DeveloperGuide/smartcontract/05-sc-api) and the [source code](https://github.com/ontio/ontology-python-compiler) here.
