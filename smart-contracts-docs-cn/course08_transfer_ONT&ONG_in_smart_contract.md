@@ -40,8 +40,6 @@ def Main(operation, args):
 
 def transfer(from_acct, to_acct, ont_amount, ong_amount):
     # transfer base58 address to address in the form of byte array 
-    from_acct=Base58ToAddress(from_acct)
-    to_acct=Base58ToAddress(to_acct)
     # check whether the sender is the payer
     if CheckWitness(from_acct):
         # transfer ONT
