@@ -68,7 +68,7 @@ def Main(operation, args):
         author = args[4]
         email = args[5]
         description = args[6]
-        return migrate_contract(avm_code)
+        return migrate_contract(avm_code, need_storage, name, version, author, email, description)
 
     return False
 
