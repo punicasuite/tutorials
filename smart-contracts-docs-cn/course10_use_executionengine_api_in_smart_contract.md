@@ -1,4 +1,4 @@
-<h1 align="center">How to Use Other API in Smart Contract</h1>
+<h1 align="center">How to Use ExecutionEngine API in Smart Contract</h1>
 <p align="center" class="version">Version 0.1</p>
 
 ## 1. Introduction
