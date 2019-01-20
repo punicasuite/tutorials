@@ -98,4 +98,11 @@ def test2():
     return True
 ```
 
+## 3. Contributing 
 
+```
+Please feel free to give any suggestion and help us make video better!
+Contact: Yue Zhao 
+Wechat: 16621171248
+Email: messixaviinsta0303@163.com
+```
