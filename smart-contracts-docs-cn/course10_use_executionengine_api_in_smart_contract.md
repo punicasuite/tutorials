@@ -5,8 +5,9 @@
 
 | API                          | Return Value  | Description                                       |
 | ---------------------------- | ---- | ---------------------------------------- |
-| GetExecutingScriptHash | bytearray | Get the hash of a script of a smart contract  |
-|GetCallingScriptHash | bytearray | Get the address of the contract caller |
+| GetExecutingScriptHash | bytearray | Get the hash of a smart contract  |
+|GetCallingScriptHash | bytearray | Get the hash of the contract|
+|GetEntryScriptHash | bytearray | Get the hash of the entry contract |
 |RegisterAction| Notify structure| Push notification|
 
 For more details, you can view the [API-doc](http://dev-docs.ont.io/#/docs-en/DeveloperGuide/smartcontract/05-sc-api) and the [source code](https://github.com/ontio/ontology-python-compiler) here.
