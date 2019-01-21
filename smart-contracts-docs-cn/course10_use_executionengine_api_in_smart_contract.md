@@ -57,6 +57,46 @@ def GetCallingScriptHash_test2():
     return GetCallingScriptHash()
 ```
 
+### 2.4 GetEntryScriptHash
+
+```
+from ontology.interop.System.ExecutionEngine import GetExecutingScriptHash, GetCallingScriptHash, GetEntryScriptHash
+from ontology.interop.System.Runtime import CheckWitness, GetTime, Notify, Serialize, Deserialize
+
+ContractAddress = GetExecutingScriptHash()
+
+def Main(operation, args):
+    if operation == "invokeB":
+        return invokeB(args[0])
+    if operation == "avoidToBeInvokedByContract":
+        return avoidToBeInvokedByContract()
+        
+    return False
+
+
+def invokeB(param):
+    Notify(["111_invokeB", param])
+    # the result of GetCallingScriptHash and GetEntryScriptHash is same
+    # if they are invoked by the same contract
+    callerHash = GetCallingScriptHash()
+    entryHash = GetEntryScriptHash()
+    Notify([callerHash, entryHash, ContractAddress])
+    return [callerHash, entryHash, ContractAddress]
+
+def avoidToBeInvokedByContract():
+    # the purpose is to prevent hack from other contract
+    callerHash = GetCallingScriptHash()
+    entryHash = GetEntryScriptHash()
+    if callerHash != entryHash:
+        Notify(["You are not allowed to invoke this method through contract"])
+        Notify([callerHash, entryHash, ContractAddress])
+        return False
+    else:
+        Notify(["You can implement what you need to do here!"])
+        Notify([callerHash, entryHash, ContractAddress])
+        return True
+```
+
 ## 3. How to use Action
 
 ### 3.1 Import
