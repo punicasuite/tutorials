@@ -56,6 +56,7 @@ The existing contract will be replaced by the newly migrated contract. The data 
 from ontology.interop.Ontology.Contract import Migrate
 from ontology.interop.System.Contract import Destroy
 from ontology.interop.System.Runtime import Notify
+from ontology.libont import AddressFromVmCode
 
 def Main(operation, args):
     if operation == "migrate_contract":
@@ -77,6 +78,8 @@ def migrate_contract(avm_code, need_storage, name, version, author, email, descr
     res = Migrate(avm_code, need_storage, name, version, author, email, description)
     if res:
         Notify(["Migrate successfully"])
+        new_contract_hash=AddressFromVmCode(avm_code)
+        Notify(new_contract_hash)
         return True
     else:
         return False
