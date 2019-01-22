@@ -59,6 +59,8 @@ def GetCallingScriptHash_test2():
 
 ### 2.4 GetEntryScriptHash
 
+the contract B
+
 ```
 from ontology.interop.System.ExecutionEngine import GetExecutingScriptHash, GetCallingScriptHash, GetEntryScriptHash
 from ontology.interop.System.Runtime import CheckWitness, GetTime, Notify, Serialize, Deserialize
@@ -95,6 +97,45 @@ def avoidToBeInvokedByContract():
         Notify(["You can implement what you need to do here!"])
         Notify([callerHash, entryHash, ContractAddress])
         return True
+```
+
+The contract A invokes the contract B.
+
+```
+from boa.interop.System.App import RegisterAppCall
+from boa.interop.System.ExecutionEngine import GetExecutingScriptHash, GetCallingScriptHash, GetEntryScriptHash
+from boa.interop.System.Runtime import CheckWitness, GetTime, Notify, Serialize, Deserialize
+
+
+
+ContractB = RegisterAppCall('01aa64971c03abfcaa78d6d2b69ee20b5f55675f', 'operation', 'args')
+
+ContractAddress = GetExecutingScriptHash()
+
+def Main(operation, args):
+    if operation == "invokeA":
+        opt = args[0]
+        params = args[1]
+        return invokeA(opt, params)
+    if operation == "checkHash":
+        return checkHash()
+    return False
+
+
+def invokeA(opt, params):
+    callerHash = GetCallingScriptHash()
+    entryHash = GetEntryScriptHash()
+    Notify(["111_invokeA",callerHash, entryHash, ContractAddress])
+    return ContractB(opt, [params])
+
+
+def checkHash():
+    Notify(["111_checkHash"])
+    # to prevent hack from other contract
+    callerHash = GetCallingScriptHash()
+    entryHash = GetEntryScriptHash()
+    Notify([callerHash, entryHash, ContractAddress])
+    return True
 ```
 
 ## 3. How to use Action
