@@ -6,7 +6,7 @@
 | API                          | Return Value  | Description                                       |
 | ---------------------------- | ---- | ---------------------------------------- |
 | Destroy                 | none |      Destroy a smart contract      |
-| Migrate | bool | Upgrade a smart contract. The existing contract will be replaced by the newly migrated contract                  |
+| Migrate | contract structure | Upgrade a smart contract. The existing contract will be replaced by the newly migrated contract                  |
 
 For more details, you can view the [API-doc](http://dev-docs.ont.io/#/docs-en/DeveloperGuide/smartcontract/05-sc-api) and the [source code](https://github.com/ontio/ontology-python-compiler) here.
 
