@@ -64,25 +64,22 @@ the contract B
 from ontology.interop.System.ExecutionEngine import GetExecutingScriptHash, GetCallingScriptHash, GetEntryScriptHash
 from ontology.interop.System.Runtime import CheckWitness, GetTime, Notify, Serialize, Deserialize
 
-ContractAddress = GetExecutingScriptHash()
-
 def Main(operation, args):
     if operation == "invokeB":
-        return invokeB(args[0])
+        return invokeB()
     if operation == "avoidToBeInvokedByContract":
         return avoidToBeInvokedByContract()
         
     return False
 
 
-def invokeB(param):
-    Notify(["111_invokeB", param])
+def invokeB():
     # the result of GetCallingScriptHash and GetEntryScriptHash is same
     # if they are invoked by the same contract
     callerHash = GetCallingScriptHash()
     entryHash = GetEntryScriptHash()
-    Notify([callerHash, entryHash, ContractAddress])
-    return [callerHash, entryHash, ContractAddress]
+    Notify([callerHash, entryHash])
+    return [callerHash, entryHash]
 
 def avoidToBeInvokedByContract():
     # the purpose is to prevent hack from other contract
@@ -90,50 +87,42 @@ def avoidToBeInvokedByContract():
     entryHash = GetEntryScriptHash()
     if callerHash != entryHash:
         Notify(["You are not allowed to invoke this method through contract"])
-        Notify([callerHash, entryHash, ContractAddress])
         return False
     else:
         Notify(["You can implement what you need to do here!"])
-        Notify([callerHash, entryHash, ContractAddress])
         return True
 ```
 
 The contract A invokes the contract B.
 
 ```
-from boa.interop.System.App import RegisterAppCall
-from boa.interop.System.ExecutionEngine import GetExecutingScriptHash, GetCallingScriptHash, GetEntryScriptHash
-from boa.interop.System.Runtime import CheckWitness, GetTime, Notify, Serialize, Deserialize
-
-
+from ontology.interop.System.App import RegisterAppCall
+from ontology.interop.System.ExecutionEngine import GetExecutingScriptHash, GetCallingScriptHash, GetEntryScriptHash
+from ontology.interop.System.Runtime import CheckWitness, GetTime, Notify, Serialize, Deserialize
 
 ContractB = RegisterAppCall('01aa64971c03abfcaa78d6d2b69ee20b5f55675f', 'operation', 'args')
-
-ContractAddress = GetExecutingScriptHash()
 
 def Main(operation, args):
     if operation == "invokeA":
         opt = args[0]
-        params = args[1]
-        return invokeA(opt, params)
+        return invokeA(opt)
     if operation == "checkHash":
         return checkHash()
     return False
 
 
-def invokeA(opt, params):
+def invokeA(opt):
     callerHash = GetCallingScriptHash()
     entryHash = GetEntryScriptHash()
-    Notify(["111_invokeA",callerHash, entryHash, ContractAddress])
-    return ContractB(opt, [params])
+    Notify(["111_invokeA",callerHash, entryHash])
+    return ContractB(opt, [])
 
 
 def checkHash():
     Notify(["111_checkHash"])
-    # to prevent hack from other contract
     callerHash = GetCallingScriptHash()
     entryHash = GetEntryScriptHash()
-    Notify([callerHash, entryHash, ContractAddress])
+    Notify([callerHash, entryHash])
     return True
 ```
 
