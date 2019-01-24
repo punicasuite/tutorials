@@ -8,7 +8,6 @@
 | GetExecutingScriptHash | bytearray | Get the hash of a smart contract  |
 |GetCallingScriptHash | bytearray | Get the hash of the contract|
 |GetEntryScriptHash | bytearray | Get the hash of the entry contract |
-|RegisterAction| Notify structure| Push notification|
 
 For more details, you can view the [API-doc](http://dev-docs.ont.io/#/docs-en/DeveloperGuide/smartcontract/05-sc-api) and the [source code](https://github.com/ontio/ontology-python-compiler) here.
 
@@ -138,48 +137,8 @@ def checkHash():
     return True
 ```
 
-## 3. How to use Action
 
-### 3.1 Import
-```
-from ontology.interop.System.Action import RegisterAction
-```
-
-### 3.2 RegisterAction
-
-`RegisterAction` is used for pushing events. 
-
-params format: string + multiple params
-
-```
-from ontology.interop.System.Action import RegisterAction
-
-Transfer = RegisterAction('transfer_test', 'a', 'b', 'c')
-Refund = RegisterAction('refund_test', 'to', 'amount')
-
-
-def Main(operation, args):
-    if operation == "test1":
-        return test1()
-    if operation =="test2":
-        return test2()
-    return False
-
-def test1():
-    a = 3
-    b = 8
-    c = a + b
-    Transfer(a, b, c)
-    return True
-
-def test2():
-    to = 'somebody'
-    amount = 52
-    Refund(to, amount)
-    return True
-```
-
-## 4. Contributing 
+## 3. Contributing 
 
 ```
 Please feel free to give any suggestion and help us make video better!
