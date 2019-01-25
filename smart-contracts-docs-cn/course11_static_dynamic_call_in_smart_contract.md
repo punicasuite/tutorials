@@ -15,26 +15,27 @@ For more details, you can view the [API-doc](http://dev-docs.ont.io/#/docs-en/D
 The contract A
 
 ```
-from boa.interop.System.App import RegisterAppCall
-from boa.interop.System.Runtime import Notify
+from ontology.interop.System.App import RegisterAppCall
+from ontology.interop.System.Runtime import Notify
 
 HelloWorld = RegisterAppCall('5e8d6fddb980bd5b118c45d3ebff5c5f220fa2de', 'operation', 'args')
 
 def Main(operation, args):
     if operation == "CallHello":
-        msg=args[0]
-        return CallHello(msg)
+        opt = args[0]
+        msg = args[1]
+        return CallHello(opt, msg)
     return False
 
 
-def CallHello(msg):
-    return HelloWorld("Hello", [msg])
+def CallHello(opt, msg):
+    return HelloWorld(opt, [msg])
 ```
 
 The "Hello World " contract B invoked by contract A
 
 ```
-from boa.interop.System.Runtime import Notify
+from ontology.interop.System.Runtime import Notify
 
 def Main(operation, args):
     if operation == 'Hello':
@@ -53,8 +54,8 @@ def Hello(msg):
 The contract A
 
 ```
-from boa.interop.System.App import RegisterAppCall, DynamicAppCall
-from boa.interop.System.Runtime import Log, Notify
+from ontology.interop.System.App import RegisterAppCall, DynamicAppCall
+from ontology.interop.System.Runtime import Log, Notify
 
 
 CallContract = RegisterAppCall('5e8d6fddb980bd5b118c45d3ebff5c5f220fa2de', 'operation', 'args')
@@ -89,7 +90,7 @@ def StaticCallContract(opt, params):
 The "Hello World " contract B invoked by contract A
 
 ```
-from boa.interop.System.Runtime import Notify
+from ontology.interop.System.Runtime import Notify
 
 def Main(operation, args):
     if operation == 'Hello':
