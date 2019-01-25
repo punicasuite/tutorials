@@ -77,12 +77,12 @@ def Main(operation, args):
     return False
 
 def DynamicCallContract(revesedContractAddress, operation, params):
-    res = DynamicAppCall(revesedContractAddress, operation, params)
+    res = DynamicAppCall(revesedContractAddress, operation, [params])
     Notify(["the result of the DynamicCall is: ", res])
     return res
 
 def StaticCallContract(opt, params):
-    res=CallContract(opt, params)
+    res=CallContract(opt, [params])
     Notify(["the result of the StaticCall is: ", res])
     return res
 ```
