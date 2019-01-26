@@ -62,7 +62,7 @@ def get_read_only_sc():
 def get_data(key):
     sc=GetContext() 
     data=Get(sc,key)
-    Notify(data)
+    return data
     
 def save_data(key, value):
     sc=GetContext() 
