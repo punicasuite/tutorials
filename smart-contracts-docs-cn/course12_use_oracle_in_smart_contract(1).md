@@ -34,7 +34,7 @@ Oracle requests consist of 2 tasks, data fetch and data parse. Data fetch gets r
 
 [the address of the source code](https://github.com/ontio/ontology-oracle/blob/master/smartcontract/oracle.py)
 
-```
+```python
 from ontology.interop.Ontology.Contract import Migrate
 from ontology.interop.System.Storage import GetContext, Get, Put, Delete
 from ontology.interop.System.Runtime import CheckWitness, GetTime, Notify, Serialize, Deserialize
