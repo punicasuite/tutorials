@@ -21,15 +21,15 @@ from ontology.interop.Ontology.Runtime import Base58ToAddress
 oracleContract = RegisterAppCall('e0d635c7eb2c5eaa7d2207756a4c03a89790934a', 'operation', 'args')
 
 def main(operation, args):
-    if operation == 'genRandom':
-        return genRandom()
-    if operation == 'getRandom':
+    if operation == 'sendRequest':
+        return sendRequest()
+    if operation == 'getResult':
         if len(args) == 1:
-            return getRandom(args[0])
+            return getResult(args[0])
     return False
 
 
-def genRandom():
+def sendRequest():
 
     req = """{
         "scheduler":{
@@ -92,14 +92,13 @@ def genRandom():
 
     return True
 
-def getRandom(txHash):
+def getResult(txHash):
     res = oracleContract('GetOracleOutcome', [txHash])
     if not res:
         return ''
     a = Deserialize(res)
-    Notify(a)
     b = Deserialize(a[0])
-    Notify(b)
+    Notify(a)
     return True
 ```
 
@@ -109,7 +108,7 @@ The result is as follows.
 [
     [
         ["0021800316", "1610612744", "128", "1610612761", "131"],
-        ["0021800317", "2610612744", "128", "2610612761", "131"],
+        ["0021800317", "2610612744", "96", "2610612761", "131"],
         ["0021800318", "3610612744", "128", "3610612761", "131"]
     ]
 ]
