@@ -1,4 +1,4 @@
-<h1 align="center">How to Use Punica Suite (1)</h1>
+<h1 align="center">How to Use Punica Suite</h1>
 <p align="center" class="version">Version 0.1</p>
 
 ## 1. What is Punica suite  
