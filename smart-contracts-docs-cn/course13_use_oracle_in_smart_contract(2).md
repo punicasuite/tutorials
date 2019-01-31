@@ -12,10 +12,10 @@
 Note: You need to invoke this smart contract in the MainNet or in the TestNet that can be monitored by the third-party oracle nodes.
 
 ```python
-from boa.interop.System.App import RegisterAppCall
-from boa.interop.System.ExecutionEngine import GetExecutingScriptHash
-from boa.interop.System.Runtime import Notify, Serialize, Deserialize
-from boa.builtins import *
+from ontology.interop.System.App import RegisterAppCall
+from ontology.interop.System.ExecutionEngine import GetExecutingScriptHash
+from ontology.interop.System.Runtime import Notify, Serialize, Deserialize
+from ontology.builtins import *
 from ontology.interop.Ontology.Runtime import Base58ToAddress
 
 oracleContract = RegisterAppCall('e0d635c7eb2c5eaa7d2207756a4c03a89790934a', 'operation', 'args')
@@ -88,7 +88,7 @@ def genRandom():
         ]
     }"""
 
-    res = oracleContract('CreateOracleRequest',[req,Base58ToAddress('AKQj23VWXpdRou1FCUX3g8XBcSxfBLiezp')])
+    res = oracleContract('CreateOracleRequest',[req,Base58ToAddress('ATS1zQv7U9kUEatSEwSHYgvd9ZQ5Xtgum3')])
 
     return True
 
@@ -97,10 +97,8 @@ def getRandom(txHash):
     if not res:
         return ''
     a = Deserialize(res)
+    Notify(a)
     b = Deserialize(a[0])
     Notify(b)
-    Notify(b[0])
-    Notify(b[0][0])
-    Notify(b[0][0][0])
     return True
 ```
