@@ -11,6 +11,11 @@ Now dApps need more and more outside world data, like flight information, stock 
 
 Ontology oracle is a role of data transporter, making it possible for a smart contract to get data from outside world.
 
+Resource:
+
+- [**OEP-34 Proposal Introduction**](https://github.com/siovanus/OEPs/blob/master/OEPS/OEP-34.mediawiki)
+- [**Ontology Oracle Github**](https://github.com/ontio/ontology-oracle)
+
 ## 2. Oracle framework
 
 ![framework](https://upload-images.jianshu.io/upload_images/150344-fe85d3ebf8c4604b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
