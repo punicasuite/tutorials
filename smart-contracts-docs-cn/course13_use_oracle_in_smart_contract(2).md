@@ -102,3 +102,24 @@ def getRandom(txHash):
     Notify(b)
     return True
 ```
+
+The result is as follows.
+
+```text
+[
+    [
+        ["0021800316", "1610612744", "128", "1610612761", "131"],
+        ["0021800317", "2610612744", "128", "2610612761", "131"],
+        ["0021800318", "3610612744", "128", "3610612761", "131"]
+    ]
+]
+```
+
+## 3. Contributing 
+
+```
+Please feel free to give any suggestion and help us make video better!
+Contact: Yue Zhao 
+Wechat: 16621171248
+Email: messixaviinsta0303@163.com
+```
