@@ -15,7 +15,6 @@ Note: You need to invoke this smart contract in the MainNet or in the TestNet th
 from ontology.interop.System.App import RegisterAppCall
 from ontology.interop.System.ExecutionEngine import GetExecutingScriptHash
 from ontology.interop.System.Runtime import Notify, Serialize, Deserialize
-from ontology.builtins import *
 from ontology.interop.Ontology.Runtime import Base58ToAddress
 
 oracleContract = RegisterAppCall('e0d635c7eb2c5eaa7d2207756a4c03a89790934a', 'operation', 'args')
