@@ -110,3 +110,11 @@ The entry could be found via **Tools -> Ontology Tools**:
 
 from left to right: step over, step in, force step into, step out.
 
+## 4. Contributing 
+
+```
+Please feel free to give any suggestion and help us make video better!
+Contact: Yue Zhao 
+Wechat: 16621171248
+Email: messixaviinsta0303@163.com
+```
