@@ -7,7 +7,7 @@
 
 Solo-chain is an Ontology single-node private-net. It generates a block every six seconds.
 
-You can view the [source code](https://github.com/punicasuite/solo-chain) in GitHub and download the release version from [here](https://github.com/ontio/ontology/releases).
+You can view the [source code](https://github.com/punicasuite/solo-chain) in GitHub and download the release version from [here](https://github.com/punicasuite/solo-chain/releases).
 
 ### 2. Introduction 
 
