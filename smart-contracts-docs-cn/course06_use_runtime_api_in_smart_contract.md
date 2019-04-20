@@ -8,7 +8,6 @@
 | Runtime.GetTime                 | uint | Return timestamp of the most recent block           |
 | GetCurrentBlockHash|string | Return block hash of the most recent block |
 | Runtime.Notify(object[])     | void | In smart contract, sending notifications (including socket notifications or rpc queries) to clients that are executing this smart contract |
-| Runtime.Log(string)          | void | In smart contract, sending logs ( including socket notifications) to clients that are executing this smart contract       |
 | Serialize(item) |byte array |Serializes an item into a bytearray|
 | Deserialize(item)|original type | Deserializes an item from a bytearray|
 | Base58ToAddress(base58_address)|byte array|transfer a base58 address to address in form of byte array|
@@ -23,21 +22,6 @@ For more details, you can view the [API-doc](http://dev-docs.ont.io/#/docs-en/D
 ```
 from ontology.interop.System.Runtime import GetTime, CheckWitness, Log, Notify, Serialize, Deserialize
 from ontology.interop.Ontology.Runtime import Base58ToAddress, AddressToBase58, GetCurrentBlockHash
-```
-
-`Log`: In smart contract, sending logs ( including socket notifications) to clients that are executing this smart contract
-
-```
-from ontology.interop.System.Runtime import GetTime, CheckWitness, Log, Notify, Serialize, Deserialize
-
-def Main(operation):
-    if operation == 'demo':
-        return demo()
-    return False
-
-
-def demo():
-    Log("hello world")
 ```
 
 `Notify`: In smart contract, sending notifications (including socket notifications or rpc queries) to clients that are executing this smart contract
