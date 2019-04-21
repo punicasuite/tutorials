@@ -10,6 +10,20 @@
 
 For more details, you can view the [API-doc](http://dev-docs.ont.io/#/docs-en/DeveloperGuide/smartcontract/05-sc-api) and the [source code](https://github.com/ontio/ontology-python-compiler) here.
 
+### Native contract
+
+Contract name | Contract Address | 
+---|---|---
+ONT Token | 0000000000000000000000000000000000000001| 
+ONG Token | 0000000000000000000000000000000000000002 | 
+ONT ID | 0000000000000000000000000000000000000003 | 
+Global Params | 0000000000000000000000000000000000000004 | 
+Oracle | 0000000000000000000000000000000000000005 | 
+Authorization Manager(Auth) | 0000000000000000000000000000000000000006 | 
+Governance | 0000000000000000000000000000000000000007 | 
+DDXF(Decentralized Exchange) | 0000000000000000000000000000000000000008 | 
+
+
 
 ## 2. Transfer ONT/ONG
 
