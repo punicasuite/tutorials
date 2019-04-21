@@ -35,7 +35,7 @@ For more details, you can view the [API-doc](http://dev-docs.ont.io/#/docs-en/D
 from ontology.interop.System.Runtime import Notify, CheckWitness
 from ontology.interop.Ontology.Runtime import Base58ToAddress
 from ontology.interop.Ontology.Native import Invoke
-from ontology.builtins import state, bytearray
+from ontology.builtins import state
 
 # contract address 
 contract_address_ONT = bytearray(b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01')
