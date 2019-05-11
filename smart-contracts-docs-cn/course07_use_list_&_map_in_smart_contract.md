@@ -9,7 +9,7 @@ Contract about list operation
 ```
 from ontology.interop.System.Storage import Put, Get, GetContext
 from ontology.interop.System.Runtime import Notify, Serialize, Deserialize
-from ontology.builtins import append, remove, range, len, print
+# from ontology.builtins import append, remove, range, len, print
 
 LISTKEY = "List"
 
@@ -70,7 +70,7 @@ Contract about map operation
 ```
 from ontology.interop.System.Storage import Put, Get, GetContext
 from ontology.interop.System.Runtime import Notify, Serialize, Deserialize
-from ontology.builtins import append, remove
+# from ontology.builtins import append, remove
 
 MAPKEY = "Map"
 
