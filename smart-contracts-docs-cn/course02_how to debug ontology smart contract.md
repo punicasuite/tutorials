@@ -82,6 +82,5 @@ def fibnacci(n):
 
 Name: Guanjun Hu 
 Github: https://github.com/xris-hu
-Wechat: 18502127659
 Email: tcpdumpp@163.com
 ```
